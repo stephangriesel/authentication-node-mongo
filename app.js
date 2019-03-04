@@ -53,6 +53,12 @@ app.listen(port, () => {
   console.log("Listening on " + port);
 });
 
+// Clear cookies
+app.get('/', function(req,res){
+  res.clearCookie('this-is-a-secret');
+  res.send('Cookie deleted');
+});
+
 
 
 
